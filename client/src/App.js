@@ -1,9 +1,17 @@
 import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Join from "./Components/Join/Join";
+import Chat from "./Components/Chat/Chat";
 
 function App() {
   return (
     <>
-      <h2>This is the chat app</h2>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Join />} />
+          <Route exact path="/chat" element={<Chat />} />
+        </Routes>
+      </Router>
     </>
   );
 }

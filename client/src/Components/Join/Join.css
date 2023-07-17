@@ -1,0 +1,56 @@
+.join-page{
+    background-color: rgb(31, 29, 29);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.join-container{
+    /* border: 2px solid white; */
+    width: 50%;
+    /* height: 50%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+.chatlogo{
+    width: 10vmax;
+}
+.title{
+    font-size: 2.5rem;
+    width: 400px;
+    border-bottom: 2.5px solid white;
+    text-align: center;
+    padding: 1vmax;
+    color: rgb(112, 199, 233);
+}
+
+#joinInput{
+width: 400px;
+padding: 15px;
+border: none;
+outline: none;
+font-size: 1.5vmax;
+margin: 2vmax;
+box-sizing: border-box;
+
+}
+.join-btn{
+    width: 400px;
+padding: 15px;
+/* color: white; */
+border: none;
+outline: none;
+font-size: 1.5vmax;
+background-color: rgb(95, 246, 95);
+box-sizing: border-box;
+cursor: pointer;
+transition: all 0.3s;
+border-bottom: 10px;
+font-weight: bold;
+}
+.join-btn:hover{
+    background-color: rgb(49, 246, 49);
+}

@@ -15,12 +15,8 @@ const io = new Server(server, {
   },
 });
 
-io.on("connection", (socket) => {
-  console.log(socket.id);
-
-  socket.on("disconnect", () => {
-    console.log("User disconnected", socket.id);
-  });
+io.on("connection", () => {
+  console.log("New connection");
 });
 
 app.get("/", (req, res) => {
