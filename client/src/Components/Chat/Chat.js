@@ -9,8 +9,7 @@ import closeIcon from "../Images/close.png";
 import logo from "../Images/logo2.png";
 
 let socket;
-const ENDPOINT = "http://localhost:5000";
-// const ENDPOINT = process.env.REACT_APP_API_URL || "http://localhost:5000";
+const ENDPOINT = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
 const Chat = () => {
   const [id, setId] = useState("");
