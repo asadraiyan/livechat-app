@@ -25,7 +25,6 @@ const Chat = () => {
     socket = socketIo(ENDPOINT, { transports: ["websocket"] });
 
     socket.on("connect", () => {
-      alert("connected");
       setId(socket.id);
     });
 
@@ -84,7 +83,14 @@ const Chat = () => {
             ))}
           </ReactScrollToBottom>
           <div className="input-box">
-            <input type="text" id="chatInput" placeholder="Message" />
+            <input
+              type="text"
+              id="chatInput"
+              placeholder="Message"
+              onKeyPress={(event) =>
+                event.key === "Enter" ? sendMessage() : null
+              }
+            />
             <button className="send-btn" onClick={sendMessage}>
               <img src={sendLogo} className="send-logo" alt="sendLogo" />
             </button>

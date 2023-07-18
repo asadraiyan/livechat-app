@@ -1,7 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@500&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+Infant:wght@500&display=swap");
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Ysabeau Infant', sans-serif;
+  font-family: "Ysabeau Infant", sans-serif;
+}
+@media (max-aspect-ratio: 7/10) {
+  .join-page {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start !important;
+  }
+  .join-container {
+    width: 100%;
+    margin-top: 35vw !important;
+  }
+  .chatlogo {
+    width: 30vw !important;
+  }
+  .title {
+    font-size: 6vw !important;
+    width: 64vw !important;
+    border-bottom: 0.6vw solid white !important;
+    padding: 3vw !important;
+  }
+  #joinInput {
+    width: 65vw !important;
+    padding: 4vw !important;
+    font-size: 5vw !important;
+    margin: 5vw !important;
+  }
+  .join-btn {
+    width: 65vw !important;
+    padding: 4vw !important;
+    font-size: 5vw !important;
+  }
+  .chat-container {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .header {
+    height: 10% !important;
+  }
+  .chat-head {
+    font-size: 7vw !important;
+  }
+  .chatLogo {
+    width: 20vw !important;
+  }
+  .close-icon {
+    margin: 7vw !important;
+    transform: scale(2) !important;
+  }
+  .close-icon:hover {
+    transform: scale(3.2) !important;
+  }
+  .chat-box {
+    height: 80% !important;
+  }
+  .input-box {
+    height: 10% !important;
+  }
+  #chatInput {
+    padding: 4vw !important;
+    font-size: 4vw !important;
+  }
+
+  .send-logo {
+    width: 8vw !important;
+  }
+  .message-box {
+    max-width: 70% !important;
+    padding: 3vw !important;
+    margin: 3vw !important;
+    border-radius: 1.5vw !important;
+    font-size: 4vw !important;
+  }
 }
