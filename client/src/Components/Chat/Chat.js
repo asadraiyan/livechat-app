@@ -20,7 +20,7 @@ const Chat = () => {
     socket.emit("message", { message, id });
     document.getElementById("chatInput").value = "";
   };
-  console.log(messages);
+  console.log("messages", messages);
   useEffect(() => {
     socket = socketIo(ENDPOINT, { transports: ["websocket"] });
 
@@ -30,19 +30,21 @@ const Chat = () => {
 
     console.log(socket);
     socket.emit("joined", { user });
+    console.log("USER", user);
 
     socket.on("welcome", (data) => {
       setMessages([...messages, data]);
-      console.log(data.user, data.message);
+      console.log("WELCOME", data.user, data.message);
     });
-    socket.on("userJoined", (data) => {
-      setMessages([...messages, data]);
-      console.log(data.user, data.message);
-    });
-    socket.on("leave", (data) => {
-      setMessages([...messages, data]);
-      console.log(data.user, data.message);
-    });
+    // socket.on("userJoined", (data) => {
+    //   setMessages([...messages, data]);
+    //   console.log("WELCOME", data.user, data.message);
+    //   console.log(data.user, data.message);
+    // });
+    // socket.on("leave", (data) => {
+    //   setMessages([...messages, data]);
+    //   console.log(data.user, data.message);
+    // });
 
     return () => {
       socket.disconnect("disconnect");
@@ -51,6 +53,15 @@ const Chat = () => {
   }, []);
 
   useEffect(() => {
+    socket.on("userJoined", (data) => {
+      setMessages([...messages, data]);
+      console.log("WELCOME", data.user, data.message);
+      console.log(data.user, data.message);
+    });
+    socket.on("leave", (data) => {
+      setMessages([...messages, data]);
+      console.log(data.user, data.message);
+    });
     socket.on("sendMessage", (data) => {
       setMessages([...messages, data]);
       console.log(data.user, data.message, data.id);

@@ -12,8 +12,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000/",
-    methods: ["GET", "POST"],
+    origin: "*",
   },
 });
 
@@ -21,7 +20,9 @@ io.on("connection", (socket) => {
   console.log("New connection");
 
   socket.on("joined", ({ user }) => {
+    // console.log(user);
     users[socket.id] = user;
+    // console.log(users);
     console.log(`${user} has joined`);
     socket.broadcast.emit("userJoined", {
       user: "Admin",
