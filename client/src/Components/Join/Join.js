@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Join.css";
 import logo from "../Images/logo2.png";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 let user;
 
@@ -11,7 +13,9 @@ const Join = () => {
   const handleLogin = (e) => {
     if (!name) {
       e.preventDefault();
-      alert("Please enter your name");
+      toast.error("Please enter your name", {
+        position: "top-center",
+      });
     }
   };
 
@@ -35,12 +39,13 @@ const Join = () => {
             />
             <Link to="/chat" onClick={handleLogin}>
               <button className="join-btn" onClick={sendUser}>
-                Login
+                Join
               </button>
             </Link>
           </div>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };
