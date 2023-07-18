@@ -9,7 +9,7 @@ import closeIcon from "../Images/close.png";
 import logo from "../Images/logo2.png";
 
 let socket;
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
 const Chat = () => {
   const [id, setId] = useState("");
@@ -36,15 +36,6 @@ const Chat = () => {
       setMessages([...messages, data]);
       console.log("WELCOME", data.user, data.message);
     });
-    // socket.on("userJoined", (data) => {
-    //   setMessages([...messages, data]);
-    //   console.log("WELCOME", data.user, data.message);
-    //   console.log(data.user, data.message);
-    // });
-    // socket.on("leave", (data) => {
-    //   setMessages([...messages, data]);
-    //   console.log(data.user, data.message);
-    // });
 
     return () => {
       socket.disconnect("disconnect");
