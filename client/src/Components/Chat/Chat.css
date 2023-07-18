@@ -1,57 +1,83 @@
-.chat-page{
-    background-color: rgb(31, 29, 29);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.chat-page {
+  background-color: rgb(31, 29, 29);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.chat-container{
-    background-color: white;
-    width: 50%;
-    height: 60%;
+.chat-container {
+  background-color: white;
+  width: 50%;
+  height: 60%;
 }
-.header{
-    background-color:rgb(95, 246, 95);
-    height: 15%;
+.header {
+  background-color: rgb(95, 246, 95);
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.chat-box{
-   border: 0.2vmax solid black; 
-   height: 70%;
-   box-sizing: border-box;
+.logo-container {
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
 }
-.input-box{
-   border: 0.2vmax solid black; 
-   height: 15%;
-   box-sizing: border-box;
-   display: flex;
+.chat-head {
+  /* margin: 2.5vmax; */
+  font-size: 30px;
 }
-#chatInput{
-    width: 80%;
-    border: none;
-    padding: 1.5vmax;
-    box-sizing: border-box;
-    background-color: white;
-    outline: none;
-    font-size: 20px;
+.chatLogo {
+  width: 5.5vmax;
 }
-.send-btn{
-    width: 20%;
-    background-color: rgb(52, 243, 52);
-    border: none; 
-    cursor: pointer;
-    font-size: 20px;
-    transition: all 0.3s;
+.close-icon {
+  width: 1.3vmax;
+  cursor: pointer;
+  margin: 2vmax;
+  transition: all 0.3s;
+}
+.close-icon:hover {
+  transform: scale(1.2);
+}
+.chat-box {
+  /* border: 2px solid black; */
+  height: 70%;
+  box-sizing: border-box;
+}
+.input-box {
+  /* border: 2px solid black; */
+  height: 15%;
+  box-sizing: border-box;
+  display: flex;
+}
+#chatInput {
+  width: 80%;
+  border: none;
+  padding: 1.5vmax;
+  box-sizing: border-box;
+  background-color: white;
+  outline: none;
+  font-size: 20px;
+  border-top: 0.2vmax solid rgb(172, 169, 169);
+}
+.send-btn {
+  width: 20%;
+  background-color: rgb(52, 243, 52);
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s;
 }
 /* .send-btn:hover{
     background-color: rgb(49, 246, 49);
 } */
-.send-logo{
-    width: 2.7vmax;
-    filter: brightness(100) invert();
-    transition: all 0.3s;
-    color: black;
+.send-logo {
+  width: 2.7vmax;
+  filter: brightness(100) invert();
+  transition: all 0.3s;
+  color: black;
 }
-.send-logo:hover{
-    transform: translateX(10px);
+.send-logo:hover {
+  transform: translateX(10px);
 }

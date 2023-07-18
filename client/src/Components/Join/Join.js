@@ -26,17 +26,19 @@ const Join = () => {
         <div className="join-container">
           <img src={logo} alt="logo" className="chatlogo" />
           <h1 className="title">Live Chat</h1>
-          <input
-            type="text"
-            onChange={(e) => setName(e.target.value)}
-            id="joinInput"
-            placeholder="Enter your name"
-          />
-          <Link to="/chat" onClick={handleLogin}>
-            <button className="join-btn" onClick={sendUser}>
-              Login
-            </button>
-          </Link>
+          <div className="btn-container">
+            <input
+              type="text"
+              onChange={(e) => setName(e.target.value)}
+              id="joinInput"
+              placeholder="Enter your name"
+            />
+            <Link to="/chat" onClick={handleLogin}>
+              <button className="join-btn" onClick={sendUser}>
+                Login
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </>
