@@ -10,6 +10,7 @@
   background-color: white;
   width: 50%;
   height: 60%;
+  background-image: url(../Images/bg-img.jpg);
 }
 .header {
   background-color: #4cbb74;
@@ -60,7 +61,7 @@
   background-color: white;
   outline: none;
   font-size: 20px;
-  border-top: 0.2vmax solid rgb(172, 169, 169);
+  border-top: 0.2vmax solid rgb(191, 187, 187);
 }
 .send-btn {
   width: 20%;
