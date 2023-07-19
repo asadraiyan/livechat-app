@@ -42,6 +42,7 @@
 }
 .chat-box {
   /* border: 2px solid black; */
+  padding: 5px;
   height: 70%;
   box-sizing: border-box;
 }

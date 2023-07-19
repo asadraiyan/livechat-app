@@ -23,6 +23,7 @@ const Chat = () => {
     socket.emit("message", { message, id });
     document.getElementById("chatInput").value = "";
   };
+
   console.log("messages", messages);
   useEffect(() => {
     socket = socketIo(ENDPOINT, { transports: ["websocket"] });
