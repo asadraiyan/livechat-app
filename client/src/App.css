@@ -70,10 +70,14 @@
     width: 8vw !important;
   }
   .message-box {
-    max-width: 75% !important;
+    max-width: 85% !important;
     padding: 2.1vw !important;
     margin: 1.2vw !important;
     border-radius: 1.5vw !important;
-    font-size: 4.2vw !important;
+    font-size: 4.4vw !important;
+  }
+  .message-box time {
+    font-size: 3vw !important;
+    /* border: 1px solid black; */
   }
 }

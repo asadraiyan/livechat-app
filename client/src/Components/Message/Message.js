@@ -1,13 +1,23 @@
 import React from "react";
 import "./Message.css";
 
-const Message = ({ user, message, classs }) => {
+const Message = ({ user, message, classs, time }) => {
+  console.log("user in message =", user);
+  console.log("time in message =", time);
   if (user) {
     return (
-      <div className={`message-box ${classs}`}>{`${user}: ${message}`}</div>
+      <div className={`message-box ${classs}`}>
+        <div className="message-text">{`${user}: ${message}`}</div>
+        <time>{time}</time>
+      </div>
     );
   } else {
-    return <div className={`message-box ${classs}`}>{`You: ${message}`}</div>;
+    return (
+      <div className={`message-box ${classs}`}>
+        <div className="message-text">{`You: ${message}`}</div>
+        <time>{time}</time>
+      </div>
+    );
   }
 };
 

@@ -10,6 +10,23 @@ app.use(cors());
 
 const server = http.createServer(app);
 
+const currentTime = () => {
+  const now = new Date();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  const amOrPm = hours >= 12 ? "pm" : "am";
+
+  // Convert to 12-hour format
+  hours = hours % 12 || 12;
+
+  // Add leading zero to minutes if necessary
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+
+  return `${hours}:${minutes} ${amOrPm}`;
+};
+
+console.log("current time =", currentTime());
+
 const io = new Server(server, {
   cors: {
     origin: "*",
@@ -27,14 +44,21 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("userJoined", {
       user: "Admin",
       message: `${users[socket.id]} has joined`,
+      time: currentTime(),
     });
     socket.emit("welcome", {
       user: "Admin",
       message: `Welcome to the chat, ${users[socket.id]}`,
+      time: currentTime(),
     });
 
     socket.on("message", ({ message, id }) => {
-      io.emit("sendMessage", { user: users[id], message, id });
+      io.emit("sendMessage", {
+        user: users[id],
+        message,
+        id,
+        time: currentTime(),
+      });
     });
   });
 
@@ -42,6 +66,7 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("leave", {
       user: "Admin",
       message: `${users[socket.id]} has left`,
+      time: currentTime(),
     });
     console.log("User has left");
   });

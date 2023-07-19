@@ -1,12 +1,30 @@
 .message-box {
-  max-width: 45%;
-  padding: 0.7vmax;
+  max-width: 60%;
+  padding: 0 0.7vmax;
   margin: 5px;
   border-radius: 0.5vmax;
-  display: inline-block;
+  display: flex;
   clear: both;
   font-size: 1.2vmax;
-  word-break: break-all;
+  word-wrap: break-word;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  gap: 0.2vmax;
+  min-height: 35px;
+}
+
+.message-text {
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+.message-box time {
+  font-size: 0.8vmax;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 3px;
 }
 .right {
   float: right;
