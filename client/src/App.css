@@ -78,6 +78,10 @@
   }
   .message-box time {
     font-size: 3vw !important;
-    /* border: 1px solid black; */
+    margin-bottom: -1vw !important;
   }
+  /* .message-text {
+    margin-right: 2vw !important;
+    margin-top: 3vw !important;
+  } */
 }
