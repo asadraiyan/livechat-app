@@ -36,6 +36,7 @@ const Join = () => {
               onChange={(e) => setName(e.target.value)}
               id="joinInput"
               placeholder="Enter your name"
+              autoComplete="off"
             />
             <Link to="/chat" onClick={handleLogin}>
               <button className="join-btn" onClick={sendUser}>
