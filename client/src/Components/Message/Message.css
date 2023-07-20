@@ -14,8 +14,9 @@
 }
 
 .message-text {
-  margin-right: 12px;
+  margin-right: 10px;
   margin-top: 3px;
+  word-break: break-all;
 }
 
 .message-box time {
