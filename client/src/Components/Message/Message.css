@@ -30,10 +30,8 @@
 .right {
   float: right;
   background-color: rgb(196, 255, 184);
-  /* text-align: right; */
 }
 .left {
   float: left;
   background-color: rgb(200, 233, 246);
-  /* text-align: left; */
 }

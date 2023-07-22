@@ -46,7 +46,7 @@ const Join = () => {
           </div>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer autoClose={1500} />
     </>
   );
 };

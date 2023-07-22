@@ -22,7 +22,7 @@ function getCurrentTime() {
   return now.toLocaleString("en-US", options);
 }
 
-console.log(getCurrentTime()); // Output example: "10:30 PM"
+console.log(getCurrentTime());
 
 const io = new Server(server, {
   cors: {
